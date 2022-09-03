@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello WebGL</title>
+  </head>
+  <body>
+    <h1>Hello WebGL</h1>
+    <h3>A simple WebGL Setup</h3>
+    <canvas width="300" height="300" id="my_Canvas"></canvas>
+    <hr />
+  </body>
+
+  <!-- Main Program -->
+  <script>
+    function main() {
+      /* Step1: Prepare the canvas and get WebGL context */
+      var canvas = document.getElementById("my_Canvas");
+
+      var gl = canvas.getContext("experimental-webgl");
+
+      // Define the clear color 
+      gl.clearColor(1.0, 1.0, 0.0, 1);
+      // Clear the color buffer bit
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+      console.debug("gl setup done");
+    }
+
+    main();
+  </script>
+</html>
